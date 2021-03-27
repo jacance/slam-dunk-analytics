@@ -20,11 +20,11 @@ WHERE player = 'Anthony Mathis'
 
 --Create primary key for career
 ALTER TABLE career 
-ADD PRIMARY KEY (official_key);
+ADD PRIMARY KEY (new_key);
 
 
 --Create foreign key for draft
 ALTER TABLE draft
 ADD CONSTRAINT official_key
 FOREIGN KEY(official_key) 
-REFERENCES career(official_key)
+REFERENCES career(new_key)
