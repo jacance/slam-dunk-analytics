@@ -16,7 +16,7 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index.html")
 def home():
-    print"Server received request for 'Home' page...")
+    print("Server received request for 'Home' page...")
     return render_template("index.html")
 
 if __name__ == "__main__":
