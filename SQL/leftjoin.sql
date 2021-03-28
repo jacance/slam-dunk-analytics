@@ -22,6 +22,7 @@ LEFT JOIN career ON new_key = official_key;
 
 
 --Left join career
+CREATE TABLE combined AS
 SELECT
 	career.player, "2P", "2PPCT", "2PA", "3P", "3PPCT", "3PA", "AST", "BLK",
        "Conf", "FG", "FGPCT", "FGA", "FT", "FTPCT", "FTA", "G", "GS", "MP",
@@ -30,8 +31,10 @@ SELECT
 FROM
 	career
 LEFT JOIN draft ON new_key = official_key;
-	
+
 	
 SELECT * FROM draft
 
 SELECT * FROM career
+
+SELECT * FROM combined
