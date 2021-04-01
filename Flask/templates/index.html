@@ -17,6 +17,7 @@
   <script class="u-script" type="text/javascript" src="../static/js/jquery.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="../static/js/plotly.js" defer=""></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
   <script type="text/javascript" src="../static/js/app.js"></script>
 </head>
@@ -174,7 +175,7 @@
   aria-labelledby="dropdownMenuButton2" onchange="filterdata(this.value)">
   <option value="none" href="#" selected>Graphs</option>
   <option value="radar" href="#">Radar chart</option>
-  <option value="other" href="#">Other</option>
+  <option value="other" href="#">Stacked</option>
   <option value="other" href="#">Other</option>
 </select>
 <br><br>
@@ -185,6 +186,7 @@
         <div class="panel-heading">
           <h1>2017</h1>
         </div>
+        <div id = "stacked1"></div>
       </div>      
     </div>     
     <div class="col-sm-4 col-xs-12">
