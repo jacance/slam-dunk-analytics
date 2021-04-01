@@ -15,7 +15,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script class="u-script" type="text/javascript" src="../static/js/main.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="../static/js/jquery.js" defer=""></script>
-
+  <script class="u-script" type="text/javascript" src="../static/js/plotly.js" defer=""></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
+  <script type="text/javascript" src="../static/js/app.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -51,7 +54,7 @@
     <div class="col-sm-8">
       <h2>About</h2><br>
       <h4>With the advent of Moneyball, sports organizations are all using analytics to give themselves a greater analytical edge. Building through the draft is one of the best ways for an NBA organization to go from basement-dweller to a contender in their respective sport. <br><br>
-      Our Slam Dunk Analaytics machine learning model helps teams analyze draft prospects so that they can make the best use of their draft capital.</p>
+      Our Slam Dunk Analytics machine learning model helps teams analyze draft prospects so that they can make the best use of their draft capital.</p>
       <br><button class="btn btn-default btn-lg"><a href="#contact">Get in Touch</a></button>
     </div>
     <div class="col-sm-4">
@@ -200,28 +203,1327 @@
     </div>
   </div>
 
-  <div class="row slideanim">
+<div class="row slideanim">
     
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>2017</h1>
-          <
-        </div>
+        </div><div class="table-responsive">
+  <table class=" table table-striped">
+      <thead>
+    <tr style="text-align: right;">
+      <th>Round</th>
+      <th>Pick</th>
+      <th>Predicted Player</th>
+      <th>Actual Player</th>
+      <th>Delta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>Markelle Fultz</td>
+      <td>Markelle Fultz</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Malik Monk</td>
+      <td>Lonzo Ball</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>Jordan Washington</td>
+      <td>Jayson Tatum</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4</td>
+      <td>Eric Mika</td>
+      <td>Josh Jackson</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5</td>
+      <td>Lonzo Ball</td>
+      <td>De'Aaron Fox</td>
+      <td>-3.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6</td>
+      <td>Jayson Tatum</td>
+      <td>Jonathan Isaac</td>
+      <td>-3.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7</td>
+      <td>Demetrius McReynolds</td>
+      <td>Lauri Markkanen</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8</td>
+      <td>De'Aaron Fox</td>
+      <td>Frank Ntilikina</td>
+      <td>-3.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>9</td>
+      <td>Jonathan Isaac</td>
+      <td>Dennis Smith Jr.</td>
+      <td>-3.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10</td>
+      <td>Lauri Markkanen</td>
+      <td>Zach Collins</td>
+      <td>-3.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>11</td>
+      <td>Josh Jackson</td>
+      <td>Malik Monk</td>
+      <td>-7.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12</td>
+      <td>Zach Collins</td>
+      <td>Luke Kennard</td>
+      <td>-2.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>13</td>
+      <td>Luke Kennard</td>
+      <td>Donovan Mitchell</td>
+      <td>-1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>14</td>
+      <td>Donovan Mitchell</td>
+      <td>Bam Adebayo</td>
+      <td>-1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>15</td>
+      <td>Brent Calhoun</td>
+      <td>Justin Jackson</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>16</td>
+      <td>Emile Blackman</td>
+      <td>Justin Patton</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>17</td>
+      <td>Justin Patton</td>
+      <td>D.J. Wilson</td>
+      <td>-1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18</td>
+      <td>Mike Sagay</td>
+      <td>T.J. Leaf</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>19</td>
+      <td>D.J. Wilson</td>
+      <td>John Collins</td>
+      <td>-2.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>20</td>
+      <td>Isaiah Briscoe</td>
+      <td>Harry Giles</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>21</td>
+      <td>John Collins</td>
+      <td>Terrance Ferguson</td>
+      <td>-2.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>22</td>
+      <td>Doyin Akintobi-Adeyeye</td>
+      <td>Jarrett Allen</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>23</td>
+      <td>Martez Harrison</td>
+      <td>OG Anunoby</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>24</td>
+      <td>Harry Giles</td>
+      <td>Tyler Lydon</td>
+      <td>-4.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>25</td>
+      <td>T.J. Cromer</td>
+      <td>Anžejs Pasečņiks</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>26</td>
+      <td>Jarrett Allen</td>
+      <td>Caleb Swanigan</td>
+      <td>-4.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>27</td>
+      <td>Tim Coleman</td>
+      <td>Kyle Kuzma</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>28</td>
+      <td>Andrew White</td>
+      <td>Tony Bradley</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>29</td>
+      <td>OG Anunoby</td>
+      <td>Derrick White</td>
+      <td>-6.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>30</td>
+      <td>Tyler Lydon</td>
+      <td>Josh Hart</td>
+      <td>-6.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>31</td>
+      <td>Devin Robinson</td>
+      <td>Frank Jackson</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>32</td>
+      <td>Yohanny Dalembert</td>
+      <td>Davon Reed</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>33</td>
+      <td>Caleb Swanigan</td>
+      <td>Wesley Iwundu</td>
+      <td>-7.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>34</td>
+      <td>Kyle Kuzma</td>
+      <td>Frank Mason III</td>
+      <td>-7.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>35</td>
+      <td>Donte McGill</td>
+      <td>Ivan Rabb</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>36</td>
+      <td>Andris Misters</td>
+      <td>Jonah Bolden</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>37</td>
+      <td>Tony Bradley</td>
+      <td>Semi Ojeleye</td>
+      <td>-9.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>38</td>
+      <td>Jonathan Williams</td>
+      <td>Jordan Bell</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>39</td>
+      <td>Miles Bowman</td>
+      <td>Jawun Evans</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>40</td>
+      <td>Justin Robinson</td>
+      <td>Dwayne Bacon</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>41</td>
+      <td>Josh Hart</td>
+      <td>Tyler Dorsey</td>
+      <td>-11.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>42</td>
+      <td>Marcus Romain</td>
+      <td>Thomas Bryant</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>43</td>
+      <td>Wesley Iwundu</td>
+      <td>Isaiah Hartenstein</td>
+      <td>-10.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>44</td>
+      <td>Prince Okoroh</td>
+      <td>Damyean Dotson</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>45</td>
+      <td>Semi Ojeleye</td>
+      <td>Dillon Brooks</td>
+      <td>-8.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>46</td>
+      <td>Jordan Bell</td>
+      <td>Sterling Brown</td>
+      <td>-8.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>47</td>
+      <td>Jawun Evans</td>
+      <td>Ike Anigbogu</td>
+      <td>-8.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>48</td>
+      <td>Eric Eaves</td>
+      <td>Sindarius Thornwell</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>49</td>
+      <td>Dwayne Bacon</td>
+      <td>Vlatko Čančar</td>
+      <td>-9.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>50</td>
+      <td>Tyler Dorsey</td>
+      <td>Mathias Lessort</td>
+      <td>-9.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>51</td>
+      <td>Elijah Wilson</td>
+      <td>Monte Morris</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>52</td>
+      <td>Damyean Dotson</td>
+      <td>Edmond Sumner</td>
+      <td>-8.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>53</td>
+      <td>Dillon Brooks</td>
+      <td>Kadeem Allen</td>
+      <td>-8.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>54</td>
+      <td>Sterling Brown</td>
+      <td>Alec Peters</td>
+      <td>-8.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>55</td>
+      <td>Monte Morris</td>
+      <td>Nigel Williams-Goss</td>
+      <td>-4.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>56</td>
+      <td>Edmond Sumner</td>
+      <td>Jabari Bird</td>
+      <td>-4.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>57</td>
+      <td>Leyton Hammonds</td>
+      <td>Sasha Vezenkov</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>58</td>
+      <td>Nigel Williams-Goss</td>
+      <td>Ognjen Jaramaz</td>
+      <td>-3.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>59</td>
+      <td>Karachi Edo</td>
+      <td>Jaron Blossomgame</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>60</td>
+      <td>Jarred Jones</td>
+      <td>Alpha Kaba</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table></div>
       </div>      
     </div>     
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>2018</h1>
-        </div>
+        </div><div class="table-responsive">
+          <table class=" table table-striped">
+              <thead>
+            <tr style="text-align: right;">
+              <th>Round</th>
+              <th>Pick</th>
+              <th>Predicted Player</th>
+              <th>Actual Player</th>
+              <th>Delta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>1</td>
+              <td>Shai Gilgeous-Alexander</td>
+              <td>Deandre Ayton</td>
+              <td>10.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>2</td>
+              <td>Kevin Knox</td>
+              <td>Marvin Bagley III</td>
+              <td>7.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>3</td>
+              <td>Jaren Jackson</td>
+              <td>Luka Dončić</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>4</td>
+              <td>Davion Turner</td>
+              <td>Jaren Jackson Jr.</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>5</td>
+              <td>Mohamed Bamba</td>
+              <td>Trae Young</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>6</td>
+              <td>Justin Tillman</td>
+              <td>Mo Bamba</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>7</td>
+              <td>Ben Lammers</td>
+              <td>Wendell Carter Jr.</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>8</td>
+              <td>Deandre Ayton</td>
+              <td>Collin Sexton</td>
+              <td>-7.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>9</td>
+              <td>Trae Young</td>
+              <td>Kevin Knox</td>
+              <td>-4.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>10</td>
+              <td>Gary Trent</td>
+              <td>Mikal Bridges</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>11</td>
+              <td>Collin Sexton</td>
+              <td>Shai Gilgeous-Alexander</td>
+              <td>-3.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>12</td>
+              <td>Jalin Hart</td>
+              <td>Miles Bridges</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>13</td>
+              <td>Johnny Hamilton</td>
+              <td>Jerome Robinson</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>14</td>
+              <td>Mikal Bridges</td>
+              <td>Michael Porter Jr.</td>
+              <td>-4.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>15</td>
+              <td>Nick Dixon</td>
+              <td>Troy Brown Jr.</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>16</td>
+              <td>Miles Bridges</td>
+              <td>Zhaire Smith</td>
+              <td>-4.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>17</td>
+              <td>Kentrell Barkley</td>
+              <td>Donte DiVincenzo</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>18</td>
+              <td>Donte DiVincenzo</td>
+              <td>Lonnie Walker</td>
+              <td>-1.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>19</td>
+              <td>Paris Collins</td>
+              <td>Kevin Huerter</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>20</td>
+              <td>Kevin Huerter</td>
+              <td>Josh Okogie</td>
+              <td>-1.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>21</td>
+              <td>Averyl Ugba</td>
+              <td>Grayson Allen</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>22</td>
+              <td>Chandler Hutchison</td>
+              <td>Chandler Hutchison</td>
+              <td>0.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>23</td>
+              <td>Desmond Williams</td>
+              <td>Aaron Holiday</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>24</td>
+              <td>Aaron Holiday</td>
+              <td>Anfernee Simons</td>
+              <td>-1.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>25</td>
+              <td>Zach Thomas</td>
+              <td>Moritz Wagner</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>26</td>
+              <td>Luke Meikle</td>
+              <td>Landry Shamet</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>27</td>
+              <td>Landry Shamet</td>
+              <td>Robert Williams</td>
+              <td>-1.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>28</td>
+              <td>Thomas Welsh</td>
+              <td>Jacob Evans</td>
+              <td>30.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>29</td>
+              <td>Darral Willis</td>
+              <td>Džanan Musa</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>30</td>
+              <td>Jacob Evans</td>
+              <td>Omari Spellman</td>
+              <td>-2.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>31</td>
+              <td>Omari Spellman</td>
+              <td>Elie Okobo</td>
+              <td>-1.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>32</td>
+              <td>Jevon Carter</td>
+              <td>Jevon Carter</td>
+              <td>0.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>33</td>
+              <td>Anas Mahmoud</td>
+              <td>Jalen Brunson</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>34</td>
+              <td>Jalen Brunson</td>
+              <td>Devonte' Graham</td>
+              <td>-1.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>35</td>
+              <td>Andre Spight</td>
+              <td>Melvin Frazier</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>36</td>
+              <td>Devonte' Graham</td>
+              <td>Mitchell Robinson</td>
+              <td>-2.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>37</td>
+              <td>Daryl Macon</td>
+              <td>Gary Trent Jr.</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>38</td>
+              <td>Melvin Frazier</td>
+              <td>Khyri Thomas</td>
+              <td>-3.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>39</td>
+              <td>William Lee</td>
+              <td>Isaac Bonga</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>40</td>
+              <td>Joseph Lopez</td>
+              <td>Rodions Kurucs</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>41</td>
+              <td>Frank Booker</td>
+              <td>Jarred Vanderbilt</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>42</td>
+              <td>Sam Burkart</td>
+              <td>Bruce Brown</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>43</td>
+              <td>Kevin Hervey</td>
+              <td>Justin Jackson</td>
+              <td>14.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>44</td>
+              <td>Manny Suarez</td>
+              <td>Issuf Sanon</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>45</td>
+              <td>Jarred Vanderbilt</td>
+              <td>Hamidou Diallo</td>
+              <td>-4.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>46</td>
+              <td>Trae Bell-Haynes</td>
+              <td>De'Anthony Melton</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>47</td>
+              <td>Justin Johnson</td>
+              <td>Sviatoslav Mykhailiuk</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>48</td>
+              <td>Erick Neal</td>
+              <td>Keita Bates-Diop</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>49</td>
+              <td>Ajdin Penava</td>
+              <td>Chimezie Metu</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>50</td>
+              <td>Josh Brown</td>
+              <td>Alize Johnson</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>51</td>
+              <td>Khalil Small</td>
+              <td>Tony Carr</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>52</td>
+              <td>Mike Morsell</td>
+              <td>Vince Edwards</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>53</td>
+              <td>E.C. Matthews</td>
+              <td>Devon Hall</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>54</td>
+              <td>Keita Bates-Diop</td>
+              <td>Shake Milton</td>
+              <td>-6.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>55</td>
+              <td>Dakota Mathias</td>
+              <td>Arnoldas Kulboka</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>56</td>
+              <td>Casey Benson</td>
+              <td>Ray Spalding</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>57</td>
+              <td>Xavier Eaglin</td>
+              <td>Kevin Hervey</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>58</td>
+              <td>Shep Garner</td>
+              <td>Thomas Welsh</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>59</td>
+              <td>Chimezie Metu</td>
+              <td>George King</td>
+              <td>-10.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>60</td>
+              <td>Donte Ingram</td>
+              <td>Kostas Antetokounmpo</td>
+              <td>N/A</td>
+            </tr>
+          </tbody>
+        </table></div>
+        
       </div>      
     </div>       
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>2019</h1>
-        </div>
+        </div><div class="table-responsive">
+          <table class=" table table-striped">
+              <thead>
+            <tr style="text-align: right;">
+              <th>Round</th>
+              <th>Pick</th>
+              <th>Predicted Player</th>
+              <th>Actual Player</th>
+              <th>Delta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>1</td>
+              <td>Zion Williamson</td>
+              <td>Zion Williamson</td>
+              <td>0.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>2</td>
+              <td>Ignas Brazdeikis</td>
+              <td>Ja Morant</td>
+              <td>45.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>3</td>
+              <td>De'Andre Hunter</td>
+              <td>RJ Barrett</td>
+              <td>1.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>4</td>
+              <td>Darius Garland</td>
+              <td>De'Andre Hunter</td>
+              <td>1.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>5</td>
+              <td>Coby White</td>
+              <td>Darius Garland</td>
+              <td>2.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>6</td>
+              <td>Nick Ward</td>
+              <td>Jarrett Culver</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>7</td>
+              <td>Cam Reddish</td>
+              <td>Coby White</td>
+              <td>3.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>8</td>
+              <td>Jaquan Dotson</td>
+              <td>Jaxson Hayes</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>9</td>
+              <td>Lew Stallworth</td>
+              <td>Rui Hachimura</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>10</td>
+              <td>Jaxson Hayes</td>
+              <td>Cam Reddish</td>
+              <td>-2.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>11</td>
+              <td>Mike Daum</td>
+              <td>Cameron Johnson</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>12</td>
+              <td>Nick Emery</td>
+              <td>P.J. Washington</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>13</td>
+              <td>Tyler Herro</td>
+              <td>Tyler Herro</td>
+              <td>0.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>14</td>
+              <td>Alex Copeland</td>
+              <td>Romeo Langford</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>15</td>
+              <td>Chuma Okeke</td>
+              <td>Sekou Doumbouya</td>
+              <td>1.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>16</td>
+              <td>Caleb Stewart</td>
+              <td>Chuma Okeke</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>17</td>
+              <td>Nickeil Alexander-Walker</td>
+              <td>Nickeil Alexander-Walker</td>
+              <td>0.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>18</td>
+              <td>Romeo Langford</td>
+              <td>Goga Bitadze</td>
+              <td>-4.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>19</td>
+              <td>Ja Morant</td>
+              <td>Luka Šamanić</td>
+              <td>-17.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>20</td>
+              <td>Brandon Clarke</td>
+              <td>Matisse Thybulle</td>
+              <td>1.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>21</td>
+              <td>Michael Oguine</td>
+              <td>Brandon Clarke</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>22</td>
+              <td>Grant Williams</td>
+              <td>Grant Williams</td>
+              <td>0.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>23</td>
+              <td>Ty Jerome</td>
+              <td>Darius Bazley</td>
+              <td>1.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>24</td>
+              <td>James Thompson IV</td>
+              <td>Ty Jerome</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>25</td>
+              <td>James Batemon</td>
+              <td>Nassir Little</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>26</td>
+              <td>Nassir Little</td>
+              <td>Dylan Windler</td>
+              <td>-1.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>27</td>
+              <td>Mfiondu Kabengele</td>
+              <td>Mfiondu Kabengele</td>
+              <td>0.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>28</td>
+              <td>Keldon Johnson</td>
+              <td>Jordan Poole</td>
+              <td>1.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>29</td>
+              <td>Nicolas Claxton</td>
+              <td>Keldon Johnson</td>
+              <td>2.0</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>30</td>
+              <td>Matt Rafferty</td>
+              <td>Kevin Porter Jr.</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>31</td>
+              <td>Carsen Edwards</td>
+              <td>Nicolas Claxton</td>
+              <td>2.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>32</td>
+              <td>Bruno Fernando</td>
+              <td>KZ Okpala</td>
+              <td>2.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>33</td>
+              <td>Devontae Cacok</td>
+              <td>Carsen Edwards</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>34</td>
+              <td>Aric Holman</td>
+              <td>Bruno Fernando</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>35</td>
+              <td>Elvin Rodriguez</td>
+              <td>Didi Louzada</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>36</td>
+              <td>Justin James</td>
+              <td>Cody Martin</td>
+              <td>4.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>37</td>
+              <td>Eric Paschall</td>
+              <td>Deividas Sirvydis</td>
+              <td>4.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>38</td>
+              <td>Admiral Schofield</td>
+              <td>Daniel Gafford</td>
+              <td>4.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>39</td>
+              <td>Jaylen Nowell</td>
+              <td>Alen Smailagić</td>
+              <td>4.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>40</td>
+              <td>Bol Bol</td>
+              <td>Justin James</td>
+              <td>4.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>41</td>
+              <td>Isaiah Walton</td>
+              <td>Eric Paschall</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>42</td>
+              <td>Isaiah Roby</td>
+              <td>Admiral Schofield</td>
+              <td>3.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>43</td>
+              <td>Talen Horton-Tucker</td>
+              <td>Jaylen Nowell</td>
+              <td>3.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>44</td>
+              <td>Phil Booth</td>
+              <td>Bol Bol</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>45</td>
+              <td>Joe Sherburne</td>
+              <td>Isaiah Roby</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>46</td>
+              <td>Evan Fitzner</td>
+              <td>Talen Horton-Tucker</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>47</td>
+              <td>Quinndary Weatherspoon</td>
+              <td>Ignas Brazdeikis</td>
+              <td>2.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>48</td>
+              <td>Jarrell Brantley</td>
+              <td>Terance Mann</td>
+              <td>2.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>49</td>
+              <td>Levi Bradley</td>
+              <td>Quinndary Weatherspoon</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>50</td>
+              <td>Tremont Waters</td>
+              <td>Jarrell Brantley</td>
+              <td>1.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>51</td>
+              <td>Jalen McDaniels</td>
+              <td>Tremont Waters</td>
+              <td>1.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>52</td>
+              <td>Matisse Thybulle</td>
+              <td>Jalen McDaniels</td>
+              <td>-32.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>53</td>
+              <td>Justin Wright-Foreman</td>
+              <td>Justin Wright-Foreman</td>
+              <td>0.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>54</td>
+              <td>Brian Beard</td>
+              <td>Marial Shayok</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>55</td>
+              <td>Mike Cunningham</td>
+              <td>Kyle Guy</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>56</td>
+              <td>Tayler Persons</td>
+              <td>Jaylen Hands</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>57</td>
+              <td>Kyle Guy</td>
+              <td>Jordan Bone</td>
+              <td>-2.0</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>58</td>
+              <td>Devin Mitchell</td>
+              <td>Miye Oni</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>59</td>
+              <td>Deishuan Booker</td>
+              <td>Dewan Hernandez</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>60</td>
+              <td>Jordan Bone</td>
+              <td>Vanja Marinković</td>
+              <td>-3.0</td>
+            </tr>
+          </tbody>
+        </table></div>
       </div>      
     </div>
   </div>
