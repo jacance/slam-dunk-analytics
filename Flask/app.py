@@ -23,14 +23,12 @@ def home():
 @app.route("/visualizations.html")
 def visualizations():
     sql = """
-    SELECT *
-    FROM combined
-    LIMIT 100
+    SELECT * FROM combined WHERE draft_year > 2016 AND draft_year < 2020 AND pick is not NULL
     """
 
     print(sql)
     results = pd.read_sql(sql, connection)
-    return jsonify(results.to_dict("data"))
+    return jsonify(results.to_dict("visualizationdata"))
 
 @app.route("/contact")
 def contact():
