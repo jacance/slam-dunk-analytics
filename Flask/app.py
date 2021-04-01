@@ -5,6 +5,7 @@ from sqlalchemy import create_engine, func
 from flask import Flask, jsonify, render_template
 from config import user, pw, port
 import pandas as pd
+import json
 
 
 # Create engine
@@ -38,7 +39,18 @@ def visualizations2017():
 
     print(sql)
     results = pd.read_sql(sql, connection)
-    return jsonify(results.to_dict("data"))
+    results["player"] = results["player"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    results["new_key"] = results["new_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    results["unique_player_key"] = results["unique_player_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    results = results.fillna(0)
+    ret = results.to_dict("records")
+    # ret = results.to_json()
+    # ret = ret.replace('"', '')
+    # ret = ret.replace("'", '"')
+    print(ret)
+    # print(json.loads(ret))
+    # return ret
+    return jsonify(ret)
 
 @app.route("/2018data")
 def visualizations2018():
