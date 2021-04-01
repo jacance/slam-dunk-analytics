@@ -29,7 +29,12 @@ def visualizationsall():
 
     print(sql)
     results = pd.read_sql(sql, connection)
-    return jsonify(results.to_dict("data"))
+    results["player"] = results["player"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    results["new_key"] = results["new_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    results["unique_player_key"] = results["unique_player_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    results = results.fillna(0)
+    ret = results.to_dict("records")
+    return jsonify(ret)
 
 @app.route("/2017data")
 def visualizations2017():
@@ -44,12 +49,8 @@ def visualizations2017():
     results["unique_player_key"] = results["unique_player_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
     results = results.fillna(0)
     ret = results.to_dict("records")
-    # ret = results.to_json()
-    # ret = ret.replace('"', '')
-    # ret = ret.replace("'", '"')
     print(ret)
-    # print(json.loads(ret))
-    # return ret
+
     return jsonify(ret)
 
 @app.route("/2018data")
@@ -60,7 +61,7 @@ def visualizations2018():
 
     print(sql)
     results = pd.read_sql(sql, connection)
-    return jsonify(results.to_dict("data"))
+    return jsonify(results.to_dict("records"))
 
 @app.route("/2019data")
 def visualizations2019():
@@ -70,7 +71,12 @@ def visualizations2019():
 
     print(sql)
     results = pd.read_sql(sql, connection)
-    return jsonify(results.to_dict("data"))
+    results["player"] = results["player"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    results["new_key"] = results["new_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    results["unique_player_key"] = results["unique_player_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    results = results.fillna(0)
+    ret = results.to_dict("records")
+    return jsonify(ret)
 
 
 if __name__ == "__main__":
