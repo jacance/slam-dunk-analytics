@@ -28,7 +28,7 @@ def visualizations():
 
     print(sql)
     results = pd.read_sql(sql, connection)
-    return jsonify(results.to_dict("visualizationdata"))
+    return jsonify(results.to_dict("data"))
 
 @app.route("/contact")
 def contact():
