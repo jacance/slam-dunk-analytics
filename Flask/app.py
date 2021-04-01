@@ -3,13 +3,13 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import Flask, jsonify, render_template
-from config import user, pw, port
+from config import *
 import pandas as pd
 import json
 
 
 # Create engine
-engine = create_engine(f'postgresql://{user}:{pw}@localhost:{port}/slam_dunk_analytics_db')
+engine = create_engine(f'postgresql://{user}:{pw}@{host}:{port}/{database}')
 connection = engine.connect()
 
 app = Flask(__name__)

@@ -32,6 +32,9 @@ FROM
 	career
 LEFT JOIN draft ON new_key = official_key;
 
+UPDATE combined set "draft_year" = 0 WHERE "draft_year" is NULL
+
+
 	
 SELECT * FROM draft
 
