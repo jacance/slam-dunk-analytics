@@ -21,33 +21,33 @@ def home():
     print("Server received request for 'Home' page...")
     return render_template("index.html")
 
-@app.route("/3yearsdata")
-def visualizationsall():
-    sql = """
-    SELECT * FROM combined WHERE draft_year > 2016 AND draft_year < 2020 AND pick is not NULL
-    """
+# @app.route("/3yearsdata")
+# def visualizationsall():
+#     sql = """
+#     SELECT "PTS", "TRB", "AST", "pick", "BLK", "STL" FROM combined WHERE draft_year > 2016 AND draft_year < 2020 AND pick > NULL
+# #     """
 
-    print(sql)
-    results = pd.read_sql(sql, connection)
-    results["player"] = results["player"].replace('[^a-zA-Z0-9 ]', "", regex=True)
-    results["new_key"] = results["new_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
-    results["unique_player_key"] = results["unique_player_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
-    results = results.fillna(0)
-    ret = results.to_dict("records")
-    return jsonify(ret)
+#     print(sql)
+#     results = pd.read_sql(sql, connection)
+#     results["player"] = results["player"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+#     results["new_key"] = results["new_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+#     results["unique_player_key"] = results["unique_player_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+#     results = results.fillna(0)
+#     ret = results.to_dict("records")
+#     return jsonify(ret)
 
 @app.route("/2017data")
 def visualizations2017():
     sql = """
-    SELECT * FROM combined WHERE draft_year = 2017 AND pick is not NULL
+    SELECT "PTS", "TRB", "AST", "pick", "BLK", "STL" FROM combined WHERE draft_year = 2017 AND pick > 0
     """
 
     print(sql)
     results = pd.read_sql(sql, connection)
-    results["player"] = results["player"].replace('[^a-zA-Z0-9 ]', "", regex=True)
-    results["new_key"] = results["new_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
-    results["unique_player_key"] = results["unique_player_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
-    results = results.fillna(0)
+    # results["player"] = results["player"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    # results["new_key"] = results["new_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    # results["unique_player_key"] = results["unique_player_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    # results = results.fillna(0)
     ret = results.to_dict("records")
     print(ret)
 
@@ -56,25 +56,26 @@ def visualizations2017():
 @app.route("/2018data")
 def visualizations2018():
     sql = """
-    SELECT * FROM combined WHERE draft_year = 2018 AND pick is not NULL
+    SELECT "PTS", "TRB", "AST", "pick", "BLK", "STL" FROM combined WHERE draft_year = 2018 AND pick > 0
     """
 
     print(sql)
     results = pd.read_sql(sql, connection)
-    return jsonify(results.to_dict("records"))
+    ret = results.to_dict("records")
+    return jsonify(ret)
 
 @app.route("/2019data")
 def visualizations2019():
     sql = """
-    SELECT * FROM combined WHERE draft_year = 2019 AND pick is not NULL
+    SELECT "PTS", "TRB", "AST", "pick", "BLK", "STL" FROM combined WHERE draft_year = 2019 AND pick > 0
     """
 
     print(sql)
     results = pd.read_sql(sql, connection)
-    results["player"] = results["player"].replace('[^a-zA-Z0-9 ]', "", regex=True)
-    results["new_key"] = results["new_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
-    results["unique_player_key"] = results["unique_player_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
-    results = results.fillna(0)
+    # results["player"] = results["player"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    # results["new_key"] = results["new_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    # results["unique_player_key"] = results["unique_player_key"].replace('[^a-zA-Z0-9 ]', "", regex=True)
+    # results = results.fillna(0)
     ret = results.to_dict("records")
     return jsonify(ret)
 
