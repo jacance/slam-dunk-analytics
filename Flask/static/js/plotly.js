@@ -38,7 +38,7 @@ d3.json("/2017data").then(data => {
       var trace2 = {
         x: picks2017,
         y: assists2017,
-        name: 'Assits',
+        name: 'Assists',
         type: 'bar'
       };
 
@@ -126,7 +126,7 @@ d3.json("/2018data").then(data => {
       var trace5 = {
         x: picks2018,
         y: assists2018,
-        name: 'Assits',
+        name: 'Assists',
         type: 'bar'
       };
 
@@ -214,7 +214,7 @@ d3.json("/2019data").then(data => {
       var trace8 = {
         x: picks2019,
         y: assists2019,
-        name: 'Assits',
+        name: 'Assists',
         type: 'bar'
       };
 
