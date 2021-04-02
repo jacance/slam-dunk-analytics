@@ -201,8 +201,11 @@ footer .glyphicon {
 
 h6 {
   text-align: center;
+  font-size: 18px;
+  color: black;
 }
 
 #social {
   text-align: center;
+  margin-right: 30px;
 }
