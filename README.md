@@ -59,7 +59,7 @@ Our Slam Dunk Analytics machine learning model helps teams analyze draft prospec
 
 - Random Forest (accuracy of 0.976 as a whole, but no predicted drafted players)
 - Neural Net (accuracy of 0.977 as a whole, but less than 60 predicted drafted players/year) 
-- KNN (highest accuracy k=11, 0.965, but less than 60 predicted drafted players/year)
+- KNN (highest accuracy k=11, 0.970, but less than 60 predicted drafted players/year)
 - Recursive Feature Elimination w/Cross Validation (accuracy of 0.95 on average for different n_features where n_features =/= 1)
 
 - Draft predictions showed a trend of improvement throughout the years.
