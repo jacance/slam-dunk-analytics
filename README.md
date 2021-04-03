@@ -69,11 +69,11 @@ Languages/Techniques Used:
 - Random Forest (accuracy of 0.976 as a whole, but no predicted drafted players)
 - Neural Net (accuracy of 0.977 as a whole, but less than 60 predicted drafted players/year) 
 - KNN (highest accuracy k=11, 0.970, but less than 60 predicted drafted players/year)
-- Recursive Feature Elimination w/Cross Validation (accuracy of 0.95 on average for different n_features where n_features =/= 1)
+- Recursive Feature Elimination w/Cross Validation (accuracy of 0.96 on average for different n_features where n_features =/= 1)
 
 - Draft predictions showed a trend of improvement throughout the years.
 
-- Taking the 3 most recent years 2017-2019 (excluding 2020 for anamalies in the NCAA season), our model improved from 1, to 2, then 6 Slam Dunk Picks, predicting players at their exact draft pick.
+- Taking the 3 most recent years 2017-2019 (excluding 2020 for anomalies in the NCAA season), our model improved from 1, to 2, then 6 Slam Dunk Picks, predicting players at their exact draft pick.
 
 ## Feature Importances
 ![Alt text](Flask/static/featureimportances.png?raw=true "featureimportance")
