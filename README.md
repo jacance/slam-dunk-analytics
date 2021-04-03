@@ -41,6 +41,13 @@ Our Slam Dunk Analytics machine learning model helps teams analyze draft prospec
 5. Visualize data
 
 ## Scraping Process
+
+- We obtained our data from Sportsreference.com/cbb. Individual player links are organized by last name, so we had to scrape through each letter of the alphabet (as seen in the first image below). 
+
+- After retrieving and cleaning player links (getting rid of duplicate links at the bottom of the page), we then needed to pull per 40 stats from each player as opposed to per game stats (we wanted to get stats representative of a player's time on the court, as opposed to including any time during a game that they are on the bench). These were commented out, so we needed to use the bs4.comment option to retrieve the tables before converting to pandas.
+
+- This data was all combined with historical NBA draft data (1990 and onward initially, as this was the first year of the modern NBA draft lottery) from basketball-reference.com.
+
 ![Alt text](Flask/static/scrape.png?raw=true "scrape")
 ![Alt text](Flask/static/scrape2.png?raw=true "scrape2")
 
@@ -48,7 +55,12 @@ Our Slam Dunk Analytics machine learning model helps teams analyze draft prospec
 
 - Classification was ultimately chosen over regression due to the large variance in our data (each pick in the draft getting a number 1-60, an undrafted player getting a 0).
 
-- Decision Tree was the most accurate model used (average accuracy of 0.973 for 2017-19).
+- Decision Tree was the most accurate model used (average accuracy of 0.973 for 2017-19), and the one we ultimately used to create our predicted drafts + 2021 NBA Mock Draft.
+
+- Random Forest (accuracy of 0.976 as a whole, but no predicted drafted players)
+- Neural Net (accuracy of 0.977 as a whole, but less than 60 predicted drafted players/year) 
+- KNN (highest accuracy k=11, 0.965, but less than predicted drafted players/year)
+- RFE (accuracy of 0.95 on average for different n_features)
 
 - Draft predictions showed a trend of improvement throughout the years.
 
