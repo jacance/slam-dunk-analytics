@@ -51,6 +51,7 @@ Our Slam Dunk Analytics machine learning model helps teams analyze draft prospec
 
 - Draft predictions showed a trend of improvement throughout the years.
 
+- Taking the 3 most recent years 2017-2019 (excluding 2020 for anamalies in the NCAA season), our model improved from 1, to 2, then 6 Slam Dunk Picks, predicting players at their exact draft pick.
 
 ## Feature Importances
-
+![Alt text](Flask/static/featureimportances.png?raw=true "Title")
