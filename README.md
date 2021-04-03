@@ -1,6 +1,19 @@
 # Slam Dunk Analytics
 ![Alt text](Flask/static/logo.png?raw=true "Title")
 
+## Table of Contents
+* [Background](#background)
+* [Motivation](#motivation)
+* [Context](#context)
+* [Goals](#goals)
+* [Plan](#plan)
+* [Languages/Techniques Used](#languages/techniques-used)
+* [Scraping Process](#scraping-process)
+* [Model Results](#model-results)
+* [Feature Importances](#feature-importances)
+
+
+
 ## Background
 
 With the advent of Moneyball, sports organizations are all using analytics to give themselves a greater competitive edge. 
@@ -40,7 +53,7 @@ Our Slam Dunk Analytics machine learning model helps teams analyze draft prospec
 4. Predit draft results
 5. Visualize data
 
-Languages/Techniques Used:
+## Languages/Techniques Used
 
  1. Python (Pandas, Numpy, Sklearn, BeautifulSoup, Matplotlib, Flask, SQLAlchemy, among many)
  2. Postgres SQL
