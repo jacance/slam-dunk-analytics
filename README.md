@@ -42,20 +42,10 @@ Our Slam Dunk Analytics machine learning model helps teams analyze draft prospec
 
 Languages/Techniques Used:
 
- 1. Python 
-  -Pandas
-  -Numpy
-  -Sklearn
-  -BeautifulSoup
-  -Matplotlib
-  -Flask
-  -SQLAlchemy
+ 1. Python (Pandas, Numpy, Sklearn, BeautifulSoup, Matplotlib, Flask, SQLAlchemy, among many)
  2. Postgres SQL
  3. AWS
- 4. Javascript
-  -D3
-  -Plotly
-  -Node.js
+ 4. Javascript (D3, Plotly, Node.js)
  5. HTML/CSS
  6. Heroku
 
