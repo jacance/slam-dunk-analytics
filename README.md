@@ -40,6 +40,25 @@ Our Slam Dunk Analytics machine learning model helps teams analyze draft prospec
 4. Predit draft results
 5. Visualize data
 
+Languages/Techniques Used:
+
+ 1. Python 
+  -Pandas
+  -Numpy
+  -Sklearn
+  -BeautifulSoup
+  -Matplotlib
+  -Flask
+  -SQLAlchemy
+ 2. Postgres SQL
+ 3. AWS
+ 4. Javascript
+  -D3
+  -Plotly
+  -Node.js
+ 5. HTML/CSS
+ 6. Heroku
+
 ## Scraping Process
 
 - We obtained our data from Sportsreference.com/cbb. Individual player links are organized by last name, so we had to scrape through each letter of the alphabet (as seen in the first image below). 
