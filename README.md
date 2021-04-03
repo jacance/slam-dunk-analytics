@@ -80,8 +80,10 @@ Our Slam Dunk Analytics machine learning model helps teams analyze draft prospec
 
 - Decision Tree was the most accurate model used (average accuracy of 0.973 for 2017-19), and the one we ultimately used to create our predicted drafts + 2021 NBA Mock Draft.
 
+- Note: For our final Decision Tree model, we only considered data from 2005 and afterward, which is when the NBA expanded to 30 teams and the draft had 60 total picks.
+
 - Random Forest (accuracy of 0.976 as a whole, but no predicted drafted players)
-- Neural Net (accuracy of 0.977 as a whole, but less than 60 predicted drafted players/year, or 1240 total) 
+- Neural Net (accuracy of 0.977 as a whole, but less than 60 predicted drafted players/year for 2005-now; we have 1240 total drafted players in our data 1993-now) 
 - KNN (accuracies converge to 0.9765 as k increases, but less than 60 predicted drafted players/year for all k)
 - Recursive Feature Elimination w/Cross Validation (accuracy of 0.96 on average for different n_features where n_features =/= 1)
 
