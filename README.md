@@ -46,7 +46,7 @@ Languages/Techniques Used:
  2. Postgres SQL
  3. AWS
  4. Javascript (D3, Plotly, Node.js)
- 5. HTML/CSS
+ 5. HTML/CSS/Bootstrap
  6. Heroku
 
 ## Scraping Process
