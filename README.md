@@ -19,6 +19,8 @@ With the advent of Moneyball, sports organizations are all using analytics to gi
 
 Building through the draft is one of the best ways for a team to go from basement-dweller to a contender in their respective sport.
 
+(Click on title to view site.)
+
 ## Motivation
 
 We are huge basketball fans and have seen many teams (sometimes our own) suffer through NBA drafts with mixed results. Draft picks, both good and bad, create a cascading effect for an organization's success that can be felt for years to come.
